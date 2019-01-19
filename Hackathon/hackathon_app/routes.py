@@ -62,6 +62,21 @@ def student():
     return render_template('student.html', title='Student')
 
 
+@app.route('/student/study')
+def study():
+    return render_template('student_study.html', title='Study')
+
+
+@app.route('/student/solve')
+def solve():
+    return render_template('student_solve.html', title='Solve')
+
+
+@app.route('/student/revise')
+def revise():
+    return render_template('student_revise.html', title='Revise')
+
+
 @app.route('/teacher')
 def teacher():
     return render_template('teacher.html', title='Teacher')
