@@ -58,11 +58,11 @@ def logout():
 
 
 @app.route('/student')
-def logout():
+def student():
     return render_template('student.html', title='Student')
 
 
 @app.route('/teacher')
-def logout():
-    return render_template('student.html', title='Teacher')
+def teacher():
+    return render_template('teacher.html', title='Teacher')
 
