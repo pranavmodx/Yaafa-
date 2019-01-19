@@ -1,0 +1,29 @@
+.post{
+  padding-left: 10px;
+  text-align:center;
+  width:250px;
+
+}
+
+#login{
+  padding-top: 5%;
+  width: 300px;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+#pass{
+
+  width: 300px;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#others{
+  
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+
+}
