@@ -81,3 +81,8 @@ def revise():
 def teacher():
     return render_template('teacher.html', title='Teacher')
 
+
+@app.route('/pomodoro')
+def pomodoro():
+    return render_template('pomodoro.html', title='Pomodoro')
+

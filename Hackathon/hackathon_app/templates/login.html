@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'login.css') }}">
+{% endblock links %}
+
 {% block content %}
 <form method="POST" action="" class="justify-content-center">
     {{ form.hidden_tag() }}
