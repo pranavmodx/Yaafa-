@@ -37,3 +37,7 @@ class LoginForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user == None:
             raise ValidationError("Account doesn't exist with that email.")
+
+
+class StudentForm(FlaskForm):
+    pass

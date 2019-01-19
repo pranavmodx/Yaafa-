@@ -1,7 +1,15 @@
 {% extends "layout.html" %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'student.css') }}">
+{% endblock links %}
+
 {% block content %}
     <div class="wrapper">
         <h1>Student Page</h1>
+        <h3><a href>Study</a></h3>
+        <h3><a href>Solve</a></h3>
+        <h3><a href>Revise</a></h3>
     </div>
 
 {% endblock content %}
