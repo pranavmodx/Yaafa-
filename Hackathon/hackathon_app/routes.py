@@ -55,3 +55,14 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+
+@app.route('/student')
+def logout():
+    return render_template('student.html', title='Student')
+
+
+@app.route('/teacher')
+def logout():
+    return render_template('student.html', title='Teacher')
+
