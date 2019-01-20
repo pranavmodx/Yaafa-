@@ -1,3 +1,7 @@
+html {
+    background-color: black;
+}
+
 a {
     text-decoration: none !important;
 }
@@ -14,5 +18,4 @@ body { padding-top:20px; }
 #align {
     text-align: center;
     margin: 0 auto;
-
 }

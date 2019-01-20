@@ -9,3 +9,20 @@
     margin: 0 auto;
     /* padding-bottom: 5% */
 }
+
+#register{
+    padding-top: 5%;
+    width: 300px;
+    
+    text-align: center;
+    margin: 0 auto;
+  }
+
+#pass{
+padding-top: 25px;
+width: 300px;
+
+text-align: center;
+margin: 0 auto;
+padding-bottom: 10px;
+}

@@ -6,10 +6,10 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 {% endblock links %}
 {% block content %}
-    <form method="POST" action="">
+    <form method="POST" action="" width="800px">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <div class="form-group">
+            <div class="form-group" id="register">
                 {{ form.username.label(class="form-control-label") }}
                 {{ form.username(class="form-control form-control-lg") }}
                 <div>
@@ -21,7 +21,7 @@
                 </div>
 
             </div>
-            <div class="form-group">
+            <div class="form-group" id="pass">
                 {{ form.email.label(class="form-control-label") }}
                 {{ form.email(class="form-control form-control-lg") }}
                 {% if form.email.errors %}
@@ -30,7 +30,7 @@
                     {% endfor %}
                 {% endif %}
             </div>
-            <div class="form-group">
+            <div class="form-group" id="pass">
                 {{ form.password.label(class="form-control-label") }}
                 {{ form.password(class="form-control form-control-lg") }}
                 {% if form.password.errors %}
@@ -39,7 +39,7 @@
                     {% endfor %}
                 {% endif %}
             </div>
-            <div class="form-group">
+            <div class="form-group" id="pass">
                 {{ form.confirm_password.label(class="form-control-label") }}
                 {{ form.confirm_password(class="form-control form-control-lg") }}
                 {% if form.confirm_password.errors %}
@@ -49,10 +49,10 @@
                 {% endif %}
             </div>
         </fieldset>
-        <div>
+        <div id="pass">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
-        <div>
+        <div id="pass">
             <small class="text-muted">
                 Already have an account? <a href="{{ url_for('login') }}">Sign In</a>
             </small>
