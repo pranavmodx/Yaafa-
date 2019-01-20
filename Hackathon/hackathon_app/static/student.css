@@ -1,7 +1,9 @@
 a {
     text-decoration: none !important;
 }
-
+*{
+    color:#00adb5
+}
 h1 {
     text-align: center;
 }
