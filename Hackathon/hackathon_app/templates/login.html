@@ -15,12 +15,11 @@
             {{ form.email.label(class="form-control-label") }}
             {{ form.email(class="form-control form-control-lg") }}
 
-                {% if form.email.errors %}
-                {% for error in form.email.errors  %}
-                    <span>{{ error }}</span>
-                {% endfor %}
-                {% endif %}
-
+            {% if form.email.errors %}
+            {% for error in form.email.errors  %}
+                <span>{{ error }}</span>
+            {% endfor %}
+            {% endif %}
         </div>
 
         <div class="form-group" id="pass">
