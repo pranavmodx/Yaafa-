@@ -5,9 +5,54 @@
 {% endblock links %}
 
 {% block content %}
-    <div class="wrapper">
-        <h1>Study</h1>
-    </div>
+
+    <form  method="POST" action="" class="justify-content-center" width="800px">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <div class="form-group">
+                {{ form.name.label(class="form-control-label") }}
+                {{ form.name(class="form-control form-control-lg") }}
+
+                    {% if form.name.errors %}
+                    {% for error in form.name.errors  %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                    {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.topic_name.label(class="form-control-label") }}
+                {{ form.topic_name(class="form-control form-control-lg") }}
+                {% if form.topic_name.errors %}
+                    {% for error in form.topic_name.errors  %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div id="others">
+            <div class="form-group">
+
+                {{ form.pomodoro(class="form-check-input") }}
+                {{ form.pomodoro.label(class="form-check-label") }}
+
+            </div>
+            <div class="form-group">
+
+                {{ form.bg_music(class="form-check-input") }}
+                {{ form.bg_music.label(class="form-check-label") }}
+
+            </div>
+            <div>
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+            <!-- <div>
+                <small class="text-muted">
+                    Don't have an account? <a href="{{ url_for('register') }}">Sign Up</a>
+                </small>
+            </div> -->
+        </div>  
+    </form>
 
 {% endblock content %}
 

@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextField
 from wtforms.validators import DataRequired, Length, EqualTo, Email, ValidationError
 from hackathon_app.models import User
 from flask_login import current_user
@@ -40,4 +40,16 @@ class LoginForm(FlaskForm):
 
 
 class StudentForm(FlaskForm):
-    pass
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[
+                             DataRequired()])
+    students = TextField('Students')
+    submit = SubmitField('Submit')
+
+
+class StudyForm(FlaskForm):
+    name = StringField('Name')
+    topic_name = StringField('Topic Name')
+    pomodoro = BooleanField('Set Pomodoro')
+    bg_music = BooleanField('Set Background Music')
+    submit = SubmitField('Submit')
