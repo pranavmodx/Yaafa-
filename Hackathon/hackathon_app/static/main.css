@@ -1,15 +1,20 @@
+*{
+    color:#00adb5
+}
+
 body {
-    background-color: #f5f5ff;
+    background-color: #393e46;
 }
 
 h1 {
     text-align: center;
+    color: #a6e3e9;
 }
 
 #nav{
-    background-color: "#2C3E50";
+    background-color: #222831;
 }
 
 #alignment {
-    text-align: right;
+    text-align: center;
 }
