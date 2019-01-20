@@ -155,5 +155,8 @@ class revise(db.Model):
 
         )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2f2d49a7da42374d9ae9130a28c0f4b7815ad44d
 
