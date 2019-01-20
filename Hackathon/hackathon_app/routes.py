@@ -1,6 +1,6 @@
 from hackathon_app import app, db
 from flask import render_template, flash, redirect, url_for
-from hackathon_app.forms import RegistrationForm, LoginForm
+from hackathon_app.forms import RegistrationForm, LoginForm, StudyForm
 from hackathon_app.models import User
 from flask_login import login_user, logout_user, current_user, login_required
 from hackathon_app import bcrypt
@@ -64,7 +64,15 @@ def student():
 
 @app.route('/student/study')
 def study():
-    return render_template('student_study.html', title='Study')
+    form = StudyForm()
+
+    if form.validate_on_submit():
+        flash('You have logged in successfully.', 'success')
+        return redirect(url_for('student'))
+    else:
+        flash('Login unsuccessful. Please check email and password', 'danger')
+
+    return render_template('student_study.html', form=form, title='Login')
 
 
 @app.route('/student/solve')

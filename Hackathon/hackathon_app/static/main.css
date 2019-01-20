@@ -7,7 +7,9 @@ h1 {
 }
 
 #nav{
-
     background-color: "#2C3E50";
+}
 
+#alignment {
+    text-align: right;
 }
