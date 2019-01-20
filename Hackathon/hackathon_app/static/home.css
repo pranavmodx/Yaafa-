@@ -10,7 +10,9 @@ h1 {
   size: 40px;
 }
 img {
-  margin-left: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50%;
   height: 300px;
   width: 300px;
