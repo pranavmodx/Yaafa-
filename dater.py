@@ -14,11 +14,13 @@ def create_id_name_pair():
 	students=student_names()
 	id=[]
 	for i in range(50):
-		id.append(hash(students[i]))
+		s=str(hash(students[i]))
+		s=s.replace('-','0')
+		id.append(s)
 	df=pd.DataFrame(
 		{'id':id,
 		 'name':students,		
 		})
-	df.to_csv('master.csv',sep='\t',encoding='utf-8')
+	df.to_csv('master.csv',sep=',',encoding='utf-8')
 
 create_id_name_pair();
