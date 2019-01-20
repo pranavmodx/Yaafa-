@@ -1,3 +1,6 @@
 a {
     text-decoration: none !important;
 }
+#pic{
+    background-image: url("https://images.unsplash.com/photo-1547707981-eeb6a7ac3c25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+}

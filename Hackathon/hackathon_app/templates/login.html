@@ -1,45 +1,56 @@
 {% extends "layout.html" %}
 
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'login.css') }}">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+{% endblock links %}
+
 {% block content %}
-<form method="POST" action="" class="justify-content-center">
+<form  method="POST" action="" class="justify-content-center" width="800px">
     {{ form.hidden_tag() }}
     <fieldset class="form-group">
-        <div class="form-group">
+        <div class="form-group" id="login">
             {{ form.email.label(class="form-control-label") }}
             {{ form.email(class="form-control form-control-lg") }}
-            <div>
+
                 {% if form.email.errors %}
                 {% for error in form.email.errors  %}
                     <span>{{ error }}</span>
                 {% endfor %}
                 {% endif %}
-            </div>
+
         </div>
-        <div class="form-group">
+
+        <div class="form-group" id="pass">
+
             {{ form.password.label(class="form-control-label") }}
+
             {{ form.password(class="form-control form-control-lg") }}
             {% if form.password.errors %}
                 {% for error in form.password.errors  %}
-                    <span>{{ error }}</span>
+                    {{ error }}
                 {% endfor %}
             {% endif %}
         </div>
     </fieldset>
+    <div id="others">
         <div class="form-group">
+
             {{ form.remember(class="form-check-input") }}
             {{ form.remember.label(class="form-check-label") }}
+
         </div>
         <div>
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
         <div>
-            <small class="Text(30000)-muted">
+            <small class="text-muted">
                 Don't have an account? <a href="{{ url_for('register') }}">Sign Up</a>
             </small>
         </div>
+      </div>  
 </form>
 
 {% endblock content %}
-
-
-
