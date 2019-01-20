@@ -7,3 +7,12 @@ a {
 h1 {
     text-align: center;
 }
+
+body { padding-top:20px; }
+.panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
+
+#align {
+    text-align: center;
+    margin: 0 auto;
+
+}
